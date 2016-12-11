@@ -1,0 +1,5 @@
+C:\Users\PRATIK-KR\Documents\Visual Studio 2012\Projects\XOB-hackathon\XOB-hackathon\bin\XOB-hackathon.dll
+C:\Users\PRATIK-KR\Documents\Visual Studio 2012\Projects\XOB-hackathon\XOB-hackathon\bin\XOB-hackathon.pdb
+C:\Users\PRATIK-KR\Documents\Visual Studio 2012\Projects\XOB-hackathon\XOB-hackathon\obj\Debug\XOB-hackathon.csprojResolveAssemblyReference.cache
+C:\Users\PRATIK-KR\Documents\Visual Studio 2012\Projects\XOB-hackathon\XOB-hackathon\obj\Debug\XOB-hackathon.dll
+C:\Users\PRATIK-KR\Documents\Visual Studio 2012\Projects\XOB-hackathon\XOB-hackathon\obj\Debug\XOB-hackathon.pdb

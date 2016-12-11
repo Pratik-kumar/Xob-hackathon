@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.3.1.js"></script>
+    
+    <!--<script src ="https://cdn.jsdelivr.net/angular.xml/2.2.1/angular-xml.min.js"></script>-->
+    <script src="xml2json.js"></script>
+    <script src="ConvertXml.js"></script>
+    <script src="myApp.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="myApp.css"></script>
+    <title></title>
+</head>
+<body ng-app="xob">
+    <div class="container">
+        <div ng-controller="posts">
+            <h1>Stack OverFlow</h1>
+            <!--<div ng-repeat="post in postData.posts.row.slice(((currentPostPage-1)*10), ((currentPostPage)*10)) track by $index|postId1Only">-->
+            <div ng-repeat="post in postData.posts.row.slice(((currentPostPage-1)*10), ((currentPostPage)*10)) track by $index">
+                <div ng-if="post._PostTypeId=='1'">
+              <div class="panel panel-default">
+<!--                  <table class="table">
+                      <tr></tr>
+                  </table>-->
+                  <div class="row" style="margin-left:5px">
+                      <div class="col-md-1">0 votes
+
+                      </div>
+                      <div class="col-md-11"><span style="color:blue;font-weight:400">{{post._Title}}</span>
+
+                      </div>
+                      <br />
+                      <div class="row">
+                      <div class="col-md-1">{{post._AnswerCount}} Answer
+
+                      </div>
+                      <div class="col-md-10 title"><span class="text-info">{{post._Body}}</span>
+
+                      </div>
+                  </div>
+                       <br />
+                       <div class="row">
+                      <div class="col-md-2">{{post._ViewCount}} views
+
+                      </div>
+                      <div class="col-md-9 title"><strong>{{post._Tags}}</strong>
+
+                      </div>
+                  </div>
+                      <div class="row">
+                          <div class="col-md-8"><span class="glyphicon glyphicon-thumbs-up" style="cursor:pointer" ng-click="setvoteup(post)"></span>
+                          
+                          <span>Vote</span>
+                          
+                          <span class="glyphicon glyphicon-thumbs-down" style="cursor:pointer" ng-click="setvotedown(post)"></span></div>
+                          <div class="col-md-3"><span class="text-muted" style="text-align:right">asked {{post._CreationDate}}</span>
+                          </div>
+                      </div>
+                      <br />
+                      <div class="row">
+                          <div class="col-md-8">&nbsp</div>
+                          <div class="col-md-3"><span class="text-muted" style="text-align:right">{{post.OwnerUserId}}</span>
+                          </div>
+                      </div>
+                      
+                     
+  
+                  </div>
+                <!--<div class="panel-body">{{post._Id}}</div>-->
+              </div>
+               </div>
+            </div>
+          <ul uib-pagination total-items="totalPostCount" ng-model="currentPostPage" max-size="5" ng-change="pageChanged()"></ul>
+        </div>
+        
+<!--        <table class="table">
+            <thead>
+                <tr>
+
+                </tr>
+            </thead>
+        </table>-->
+    </div>
+</body>
+</html>
